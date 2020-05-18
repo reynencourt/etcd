@@ -24,10 +24,10 @@ import (
 	"testing"
 	"time"
 
-	"go.etcd.io/etcd/v3/auth/authpb"
-	"go.etcd.io/etcd/v3/etcdserver/api/v3rpc/rpctypes"
-	pb "go.etcd.io/etcd/v3/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/v3/mvcc/backend"
+	"github.com/velann21/etcd/auth/authpb"
+	"github.com/velann21/etcd/etcdserver/api/v3rpc/rpctypes"
+	pb "github.com/velann21/etcd/etcdserver/etcdserverpb"
+	"github.com/velann21/etcd/mvcc/backend"
 
 	"go.uber.org/zap"
 	"golang.org/x/crypto/bcrypt"

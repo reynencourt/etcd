@@ -22,11 +22,11 @@ import (
 	"testing"
 	"time"
 
-	"go.etcd.io/etcd/v3/clientv3"
-	"go.etcd.io/etcd/v3/etcdserver/api/v3rpc/rpctypes"
-	pb "go.etcd.io/etcd/v3/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/v3/integration"
-	"go.etcd.io/etcd/v3/pkg/testutil"
+	"github.com/velann21/etcd/clientv3"
+	"github.com/velann21/etcd/etcdserver/api/v3rpc/rpctypes"
+	pb "github.com/velann21/etcd/etcdserver/etcdserverpb"
+	"github.com/velann21/etcd/integration"
+	"github.com/velann21/etcd/pkg/testutil"
 	"google.golang.org/grpc"
 )
 

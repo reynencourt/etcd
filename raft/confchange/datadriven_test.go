@@ -22,8 +22,8 @@ import (
 	"testing"
 
 	"github.com/cockroachdb/datadriven"
-	pb "go.etcd.io/etcd/v3/raft/raftpb"
-	"go.etcd.io/etcd/v3/raft/tracker"
+	pb "github.com/velann21/etcd/raft/raftpb"
+	"github.com/velann21/etcd/raft/tracker"
 )
 
 func TestConfChangeDataDriven(t *testing.T) {

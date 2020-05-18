@@ -17,13 +17,13 @@ package main
 import (
 	"encoding/binary"
 	"fmt"
-	"go.etcd.io/etcd/v3/auth/authpb"
+	"github.com/velann21/etcd/auth/authpb"
 	"path/filepath"
 
-	"go.etcd.io/etcd/v3/lease/leasepb"
-	"go.etcd.io/etcd/v3/mvcc"
-	"go.etcd.io/etcd/v3/mvcc/backend"
-	"go.etcd.io/etcd/v3/mvcc/mvccpb"
+	"github.com/velann21/etcd/lease/leasepb"
+	"github.com/velann21/etcd/mvcc"
+	"github.com/velann21/etcd/mvcc/backend"
+	"github.com/velann21/etcd/mvcc/mvccpb"
 
 	bolt "go.etcd.io/bbolt"
 )

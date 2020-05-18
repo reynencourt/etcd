@@ -26,11 +26,11 @@ import (
 	"sync"
 	"time"
 
-	"go.etcd.io/etcd/v3/pkg/fileutil"
-	"go.etcd.io/etcd/v3/pkg/pbutil"
-	"go.etcd.io/etcd/v3/raft"
-	"go.etcd.io/etcd/v3/raft/raftpb"
-	"go.etcd.io/etcd/v3/wal/walpb"
+	"github.com/velann21/etcd/pkg/fileutil"
+	"github.com/velann21/etcd/pkg/pbutil"
+	"github.com/velann21/etcd/raft"
+	"github.com/velann21/etcd/raft/raftpb"
+	"github.com/velann21/etcd/wal/walpb"
 
 	"go.uber.org/zap"
 )

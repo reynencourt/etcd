@@ -19,9 +19,9 @@ import (
 	"errors"
 	"fmt"
 
-	v3 "go.etcd.io/etcd/v3/clientv3"
-	pb "go.etcd.io/etcd/v3/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/v3/mvcc/mvccpb"
+	v3 "github.com/velann21/etcd/clientv3"
+	pb "github.com/velann21/etcd/etcdserver/etcdserverpb"
+	"github.com/velann21/etcd/mvcc/mvccpb"
 )
 
 var (

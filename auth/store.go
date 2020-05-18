@@ -24,11 +24,11 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"go.etcd.io/etcd/v3/auth/authpb"
-	"go.etcd.io/etcd/v3/etcdserver/api/v3rpc/rpctypes"
-	"go.etcd.io/etcd/v3/etcdserver/cindex"
-	pb "go.etcd.io/etcd/v3/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/v3/mvcc/backend"
+	"github.com/velann21/etcd/auth/authpb"
+	"github.com/velann21/etcd/etcdserver/api/v3rpc/rpctypes"
+	"github.com/velann21/etcd/etcdserver/cindex"
+	pb "github.com/velann21/etcd/etcdserver/etcdserverpb"
+	"github.com/velann21/etcd/mvcc/backend"
 
 	"go.uber.org/zap"
 	"golang.org/x/crypto/bcrypt"

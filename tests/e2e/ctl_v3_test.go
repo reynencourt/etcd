@@ -21,10 +21,10 @@ import (
 	"testing"
 	"time"
 
-	"go.etcd.io/etcd/v3/pkg/fileutil"
-	"go.etcd.io/etcd/v3/pkg/flags"
-	"go.etcd.io/etcd/v3/pkg/testutil"
-	"go.etcd.io/etcd/v3/version"
+	"github.com/velann21/etcd/pkg/fileutil"
+	"github.com/velann21/etcd/pkg/flags"
+	"github.com/velann21/etcd/pkg/testutil"
+	"github.com/velann21/etcd/version"
 )
 
 func TestCtlV3Version(t *testing.T) { testCtl(t, versionTest) }

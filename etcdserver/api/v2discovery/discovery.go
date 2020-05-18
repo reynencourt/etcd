@@ -29,9 +29,9 @@ import (
 	"strings"
 	"time"
 
-	"go.etcd.io/etcd/v3/client"
-	"go.etcd.io/etcd/v3/pkg/transport"
-	"go.etcd.io/etcd/v3/pkg/types"
+	"github.com/velann21/etcd/client"
+	"github.com/velann21/etcd/pkg/transport"
+	"github.com/velann21/etcd/pkg/types"
 
 	"github.com/jonboulle/clockwork"
 	"go.uber.org/zap"

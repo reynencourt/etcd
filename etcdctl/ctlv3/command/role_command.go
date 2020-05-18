@@ -19,7 +19,7 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"go.etcd.io/etcd/v3/clientv3"
+	"github.com/velann21/etcd/clientv3"
 )
 
 var (

@@ -29,7 +29,7 @@ import (
 	"sync"
 	"time"
 
-	"go.etcd.io/etcd/v3/version"
+	"github.com/velann21/etcd/version"
 )
 
 var (

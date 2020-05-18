@@ -22,11 +22,11 @@ import (
 	"os"
 	"time"
 
-	"go.etcd.io/etcd/v3/clientv3"
-	"go.etcd.io/etcd/v3/clientv3/snapshot"
-	pb "go.etcd.io/etcd/v3/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/v3/pkg/logutil"
-	"go.etcd.io/etcd/v3/pkg/transport"
+	"github.com/velann21/etcd/clientv3"
+	"github.com/velann21/etcd/clientv3/snapshot"
+	pb "github.com/velann21/etcd/etcdserver/etcdserverpb"
+	"github.com/velann21/etcd/pkg/logutil"
+	"github.com/velann21/etcd/pkg/transport"
 
 	"github.com/dustin/go-humanize"
 	"go.uber.org/zap"

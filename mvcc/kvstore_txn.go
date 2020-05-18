@@ -15,10 +15,10 @@
 package mvcc
 
 import (
-	"go.etcd.io/etcd/v3/lease"
-	"go.etcd.io/etcd/v3/mvcc/backend"
-	"go.etcd.io/etcd/v3/mvcc/mvccpb"
-	"go.etcd.io/etcd/v3/pkg/traceutil"
+	"github.com/velann21/etcd/lease"
+	"github.com/velann21/etcd/mvcc/backend"
+	"github.com/velann21/etcd/mvcc/mvccpb"
+	"github.com/velann21/etcd/pkg/traceutil"
 	"go.uber.org/zap"
 )
 

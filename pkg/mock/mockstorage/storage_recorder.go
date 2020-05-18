@@ -15,9 +15,9 @@
 package mockstorage
 
 import (
-	"go.etcd.io/etcd/v3/pkg/testutil"
-	"go.etcd.io/etcd/v3/raft"
-	"go.etcd.io/etcd/v3/raft/raftpb"
+	"github.com/velann21/etcd/pkg/testutil"
+	"github.com/velann21/etcd/raft"
+	"github.com/velann21/etcd/raft/raftpb"
 )
 
 type storageRecorder struct {

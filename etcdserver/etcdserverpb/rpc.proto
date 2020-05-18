@@ -1,7 +1,7 @@
 syntax = "proto3";
 package etcdserverpb;
 
-import "gogoproto/gogo.proto";
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "etcd/mvcc/mvccpb/kv.proto";
 import "etcd/auth/authpb/auth.proto";
 
