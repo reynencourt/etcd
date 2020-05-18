@@ -1,4 +1,4 @@
-module github.com/velann21/etcd/v3
+module github.com/velann21/etcd
 
 go 1.14
 
