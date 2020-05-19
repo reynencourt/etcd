@@ -6,7 +6,6 @@ require (
 	github.com/bgentry/speakeasy v0.1.0
 	github.com/cockroachdb/datadriven v0.0.0-20190809214429-80d97fb3cbaa
 	github.com/coreos/go-semver v0.2.0
-	github.com/coreos/go-systemd v0.0.0-20191111152658-2d78030078ef // indirect
 	github.com/coreos/go-systemd/v22 v22.0.0
 	github.com/creack/pty v1.1.7
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
@@ -49,6 +48,6 @@ require (
 	sigs.k8s.io/yaml v1.1.0
 )
 
-replace github.com/coreos/go-systemd => github.com/coreos/go-systemd/v22 v22.0.0
+replace github.com/coreos/go-systemd => /Users/singaravelannandakumar/github/src/github.com/coreos/go-systemd
 
 replace google.golang.org/grpc => google.golang.org/grpc v1.27.0
