@@ -856,7 +856,7 @@ See [security doc](https://github.com/etcd-io/etcd/blob/master/Documentation/op-
   - Whether compaction succeeds or not, this process repeats for every 1/10 of given compaction period. If compaction succeeds, it just removes compacted revision from historical revision records.
 - Add [`etcd --grpc-keepalive-min-time`, `etcd --grpc-keepalive-interval`, `etcd --grpc-keepalive-timeout`](https://github.com/etcd-io/etcd/pull/8535) flags to configure server-side keepalive policies.
 - Serve [`/health` endpoint as unhealthy](https://github.com/etcd-io/etcd/pull/8272) when [alarm (e.g. `NOSPACE`) is raised or there's no leader](https://github.com/etcd-io/etcd/issues/8207).
-  - Define [`etcdhttp.Health`](https://godoc.org/github.com/coreos/etcd/etcdserver/api/etcdhttp#Health) struct with JSON encoder.
+  - Define [`etcdhttp.Health`](https://godoc.org/github.com/velann21/etcd/etcdserver/api/etcdhttp#Health) struct with JSON encoder.
   - Note that `"health"` field is [`string` type, not `bool`](https://github.com/etcd-io/etcd/pull/9143).
     - e.g. `{"health":"false"}`, `{"health":"true"}`
   - [Remove `"errors"` field](https://github.com/etcd-io/etcd/pull/9162) since `v3.3.0-rc.3` (did exist only in `v3.3.0-rc.0`, `v3.3.0-rc.1`, `v3.3.0-rc.2`).
@@ -883,13 +883,13 @@ See [security doc](https://github.com/etcd-io/etcd/blob/master/Documentation/op-
 
 - Add [health balancer](https://github.com/etcd-io/etcd/pull/8545) to fix [watch API hangs](https://github.com/etcd-io/etcd/issues/7247), improve [endpoint switch under network faults](https://github.com/etcd-io/etcd/issues/7941).
 - [Refactor balancer](https://github.com/etcd-io/etcd/pull/8840) and add [client-side keepalive pings](https://github.com/etcd-io/etcd/pull/8199) to handle [network partitions](https://github.com/etcd-io/etcd/issues/8711).
-- Add [`MaxCallSendMsgSize` and `MaxCallRecvMsgSize`](https://github.com/etcd-io/etcd/pull/9047) fields to [`clientv3.Config`](https://godoc.org/github.com/coreos/etcd/clientv3#Config).
+- Add [`MaxCallSendMsgSize` and `MaxCallRecvMsgSize`](https://github.com/etcd-io/etcd/pull/9047) fields to [`clientv3.Config`](https://godoc.org/github.com/velann21/etcd/clientv3#Config).
   - Fix [exceeded response size limit error in client-side](https://github.com/etcd-io/etcd/issues/9043).
   - Address [kubernetes#51099](https://github.com/kubernetes/kubernetes/issues/51099).
     - In previous versions(v3.2.10, v3.2.11), client response size was limited to only 4 MiB.
   - `MaxCallSendMsgSize` default value is 2 MiB, if not configured.
   - `MaxCallRecvMsgSize` default value is `math.MaxInt32`, if not configured.
-- Accept [`Compare_LEASE`](https://github.com/etcd-io/etcd/pull/8324) in [`clientv3.Compare`](https://godoc.org/github.com/coreos/etcd/clientv3#Compare).
+- Accept [`Compare_LEASE`](https://github.com/etcd-io/etcd/pull/8324) in [`clientv3.Compare`](https://godoc.org/github.com/velann21/etcd/clientv3#Compare).
 - Add [`LeaseValue` helper](https://github.com/etcd-io/etcd/pull/8488) to `Cmp` `LeaseID` values in `Txn`.
 - Add [`MoveLeader`](https://github.com/etcd-io/etcd/pull/8153) to `Maintenance`.
 - Add [`HashKV`](https://github.com/etcd-io/etcd/pull/8351) to `Maintenance`.

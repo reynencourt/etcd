@@ -205,7 +205,7 @@ Now that `log-outputs` (old field name `log-output`) accepts multiple writers, e
 Renamed [**`embed.Config.LogOutput`** to **`embed.Config.LogOutputs`**](https://github.com/etcd-io/etcd/pull/9624) to support multiple log outputs. And changed [`embed.Config.LogOutput` type from `string` to `[]string`](https://github.com/etcd-io/etcd/pull/9579) to support multiple log outputs.
 
 ```diff
-import "github.com/coreos/etcd/embed"
+import "github.com/velann21/etcd/embed"
 
 cfg := &embed.Config{Debug: false}
 -cfg.LogOutput = "stderr"
@@ -235,7 +235,7 @@ v3.4 deprecates [`etcd --debug`](https://github.com/etcd-io/etcd/pull/10947) fla
 Deprecated `pkg/transport.TLSInfo.CAFile` field.
 
 ```diff
-import "github.com/coreos/etcd/pkg/transport"
+import "github.com/velann21/etcd/pkg/transport"
 
 tlsInfo := transport.TLSInfo{
     CertFile: "/tmp/test-certs/test.pem",
@@ -254,7 +254,7 @@ if err != nil {
 To be consistent with the flag name `etcd --snapshot-count`, `embed.Config.SnapCount` field has been renamed to `embed.Config.SnapshotCount`:
 
 ```diff
-import "github.com/coreos/etcd/embed"
+import "github.com/velann21/etcd/embed"
 
 cfg := embed.NewConfig()
 -cfg.SnapCount = 100000
@@ -266,7 +266,7 @@ cfg := embed.NewConfig()
 To be consistent with the flag name `etcd --snapshot-count`, `etcdserver.ServerConfig.SnapCount` field has been renamed to `etcdserver.ServerConfig.SnapshotCount`:
 
 ```diff
-import "github.com/coreos/etcd/etcdserver"
+import "github.com/velann21/etcd/etcdserver"
 
 srvcfg := etcdserver.ServerConfig{
 -  SnapCount: 100000,
@@ -278,7 +278,7 @@ srvcfg := etcdserver.ServerConfig{
 Changed `wal` function signatures to support structured logger.
 
 ```diff
-import "github.com/coreos/etcd/wal"
+import "github.com/velann21/etcd/wal"
 +import "go.uber.org/zap"
 
 +lg, _ = zap.NewProduction()
@@ -317,7 +317,7 @@ func main() {
 `embed.Config.SetupLogging` has been removed in order to prevent wrong logging configuration, and now set up automatically.
 
 ```diff
-import "github.com/coreos/etcd/embed"
+import "github.com/velann21/etcd/embed"
 
 cfg := &embed.Config{Debug: false}
 -cfg.SetupLogging()

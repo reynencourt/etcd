@@ -347,7 +347,7 @@ See [code changes](https://github.com/etcd-io/etcd/compare/v3.3.0...v3.4.0) and 
   - [AppC was officially suspended](https://github.com/appc/spec#-disclaimer-), as of late 2016.
   - [`acbuild`](https://github.com/containers/build#this-project-is-currently-unmaintained) is not maintained anymore.
   - `*.aci` files are not available from `v3.4` release.
-- Move [`"github.com/coreos/etcd"`](https://github.com/etcd-io/etcd/issues/9965) to [`"github.com/etcd-io/etcd"`](https://github.com/etcd-io/etcd/issues/9965).
+- Move [`"github.com/velann21/etcd"`](https://github.com/etcd-io/etcd/issues/9965) to [`"github.com/etcd-io/etcd"`](https://github.com/etcd-io/etcd/issues/9965).
   - Change import path to `"go.etcd.io/etcd"`.
   - e.g. `import "go.etcd.io/etcd/raft"`.
 - Make [`ETCDCTL_API=3 etcdctl` default](https://github.com/etcd-io/etcd/issues/9600).
@@ -403,16 +403,16 @@ See [code changes](https://github.com/etcd-io/etcd/compare/v3.3.0...v3.4.0) and 
   - Previously, `Create(dirpath string, metadata []byte) (*WAL, error)`, now `Create(lg *zap.Logger, dirpath string, metadata []byte) (*WAL, error)`.
 - Remove [`pkg/cors` package](https://github.com/etcd-io/etcd/pull/9490).
 - Move internal packages to `etcdserver`.
-  - `"github.com/coreos/etcd/alarm"` to `"go.etcd.io/etcd/etcdserver/api/v3alarm"`.
-  - `"github.com/coreos/etcd/compactor"` to `"go.etcd.io/etcd/etcdserver/api/v3compactor"`.
-  - `"github.com/coreos/etcd/discovery"` to `"go.etcd.io/etcd/etcdserver/api/v2discovery"`.
-  - `"github.com/coreos/etcd/etcdserver/auth"` to `"go.etcd.io/etcd/etcdserver/api/v2auth"`.
-  - `"github.com/coreos/etcd/etcdserver/membership"` to `"go.etcd.io/etcd/etcdserver/api/membership"`.
-  - `"github.com/coreos/etcd/etcdserver/stats"` to `"go.etcd.io/etcd/etcdserver/api/v2stats"`.
-  - `"github.com/coreos/etcd/error"` to `"go.etcd.io/etcd/etcdserver/api/v2error"`.
-  - `"github.com/coreos/etcd/rafthttp"` to `"go.etcd.io/etcd/etcdserver/api/rafthttp"`.
-  - `"github.com/coreos/etcd/snap"` to `"go.etcd.io/etcd/etcdserver/api/snap"`.
-  - `"github.com/coreos/etcd/store"` to `"go.etcd.io/etcd/etcdserver/api/v2store"`.
+  - `"github.com/velann21/etcd/alarm"` to `"go.etcd.io/etcd/etcdserver/api/v3alarm"`.
+  - `"github.com/velann21/etcd/compactor"` to `"go.etcd.io/etcd/etcdserver/api/v3compactor"`.
+  - `"github.com/velann21/etcd/discovery"` to `"go.etcd.io/etcd/etcdserver/api/v2discovery"`.
+  - `"github.com/velann21/etcd/etcdserver/auth"` to `"go.etcd.io/etcd/etcdserver/api/v2auth"`.
+  - `"github.com/velann21/etcd/etcdserver/membership"` to `"go.etcd.io/etcd/etcdserver/api/membership"`.
+  - `"github.com/velann21/etcd/etcdserver/stats"` to `"go.etcd.io/etcd/etcdserver/api/v2stats"`.
+  - `"github.com/velann21/etcd/error"` to `"go.etcd.io/etcd/etcdserver/api/v2error"`.
+  - `"github.com/velann21/etcd/rafthttp"` to `"go.etcd.io/etcd/etcdserver/api/rafthttp"`.
+  - `"github.com/velann21/etcd/snap"` to `"go.etcd.io/etcd/etcdserver/api/snap"`.
+  - `"github.com/velann21/etcd/store"` to `"go.etcd.io/etcd/etcdserver/api/v2store"`.
 - Change [snapshot file permissions](https://github.com/etcd-io/etcd/pull/9977): On Linux, the snapshot file changes from readable by all (mode 0644) to readable by the user only (mode 0600).
 - Change [`pkg/adt.IntervalTree` from `struct` to `interface`](https://github.com/etcd-io/etcd/pull/10959).
   - See [`pkg/adt` README](https://github.com/etcd-io/etcd/tree/master/pkg/adt) and [`pkg/adt` godoc](https://godoc.org/go.etcd.io/etcd/pkg/adt).
@@ -640,7 +640,7 @@ See [security doc](https://github.com/etcd-io/etcd/blob/master/Documentation/op-
 
 - Add `isLearner` field to `etcdserverpb.Member`, `etcdserverpb.MemberAddRequest` and `etcdserverpb.StatusResponse` as part of [raft learner implementation](https://github.com/etcd-io/etcd/pull/10725).
 - Add `MemberPromote` rpc to `etcdserverpb.Cluster` interface and the corresponding `MemberPromoteRequest` and `MemberPromoteResponse` as part of [raft learner implementation](https://github.com/etcd-io/etcd/pull/10725).
-- Add [`snapshot`](https://github.com/etcd-io/etcd/pull/9118) package for snapshot restore/save operations (see [`godoc.org/github.com/etcd/clientv3/snapshot`](https://godoc.org/github.com/coreos/etcd/clientv3/snapshot) for more).
+- Add [`snapshot`](https://github.com/etcd-io/etcd/pull/9118) package for snapshot restore/save operations (see [`godoc.org/github.com/etcd/clientv3/snapshot`](https://godoc.org/github.com/velann21/etcd/clientv3/snapshot) for more).
 - Add [`watch_id` field to `etcdserverpb.WatchCreateRequest`](https://github.com/etcd-io/etcd/pull/9065) to allow user-provided watch ID to `mvcc`.
   - Corresponding `watch_id` is returned via `etcdserverpb.WatchResponse`, if any.
 - Add [`fragment` field to `etcdserverpb.WatchCreateRequest`](https://github.com/etcd-io/etcd/pull/9291) to request etcd server to [split watch events](https://github.com/etcd-io/etcd/issues/9294) when the total size of events exceeds `etcd --max-request-bytes` flag value plus gRPC-overhead 512 bytes.
