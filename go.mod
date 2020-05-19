@@ -47,7 +47,3 @@ require (
 	gopkg.in/yaml.v2 v2.2.2
 	sigs.k8s.io/yaml v1.1.0
 )
-
-replace github.com/coreos/go-systemd => /Users/singaravelannandakumar/github/src/github.com/coreos/go-systemd
-
-replace google.golang.org/grpc => google.golang.org/grpc v1.27.0
